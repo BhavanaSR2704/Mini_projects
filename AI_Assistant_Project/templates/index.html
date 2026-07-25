@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🤖 Smart AI Assistant</h1>
+
+    <form action="/process" method="POST">
+
+        <label>Select Function</label>
+
+        <select name="function">
+
+            <option value="question">Question Answering</option>
+
+            <option value="summary">Text Summarization</option>
+
+            <option value="creative">Creative Writing</option>
+
+            <option value="advice">Study Advice</option>
+
+        </select>
+
+        <br><br>
+
+        <label>Enter your text</label>
+
+        <textarea
+            name="user_input"
+            rows="8"
+            placeholder="Type here..."
+            required></textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Submit
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

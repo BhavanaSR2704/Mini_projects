@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Result</h1>
+
+    <div class="result">
+
+        {{ result }}
+
+    </div>
+
+    <br>
+
+    <form action="/feedback" method="POST">
+
+        <label>Was this response helpful?</label>
+
+        <br><br>
+
+        <button
+            type="submit"
+            name="feedback"
+            value="Yes">
+
+            👍 Yes
+
+        </button>
+
+        <button
+            type="submit"
+            name="feedback"
+            value="No">
+
+            👎 No
+
+        </button>
+
+    </form>
+
+    <br>
+
+    <form action="/" method="get">
+    <button type="submit">
+        ⬅ Back to Home
+    </button>
+</form>
+
+</div>
+
+</body>
+
+</html>
